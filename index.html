@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="./css/menu.css" />
+    <link rel="stylesheet" href="./css/overlay.css" />
+    <title>Jogo da Xereca</title>
+  </head>
+  <body>
+    <div class="geralContainer">
+      <div class="overlay">
+        <span class="close">X</span>
+        <div class="settings">
+          <h3 class="title">Settings</h3>
+          <div class="form">
+            <div class="box">
+              <div class="info">Volume</div>
+              <div class="input"><input type="range" /></div>
+            </div>
+            <div class="box">
+              <div class="info">Music</div>
+              <div class="input"><input type="range" /></div>
+            </div>
+            <div class="box">
+              <div class="info">Effects</div>
+              <div class="input"><input type="range" /></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="soundsButon"></div>
+      <div class="centerContainer">
+        <div class="title">
+          <img src="./imgs/title.png" alt="Clitoris Adventure" class="title" />
+        </div>
+        <menu class="menu">
+          <div class="buttons">Start</div>
+          <div class="buttons" onclick="callOverlay('settings')">Settings</div>
+          <div class="buttons">Credits</div>
+        </menu>
+      </div>
+      <div class="copyright"></div>
+    </div>
+    <script src="./js/overlay.js"></script>
+  </body>
+</html>

@@ -1,0 +1,78 @@
+@import 'colors';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $lightGreen;
+}
+
+.title h1 {
+  font-family: 'Pacifico', cursive;
+  color: $pink;
+  text-shadow: 2.5px 1px $darkRed;
+}
+
+.centerContainer {
+  position: fixed;
+  max-width: 40vw;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+
+  .title {
+    width: 100%;
+    animation: rotate 6s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite;
+    @keyframes rotate {
+      0% {
+        transform: rotate(2deg);
+      }
+      50% {
+        transform: rotate(-2deg);
+      }
+      100% {
+        transform: rotate(2deg);
+      }
+    }
+  }
+
+  menu {
+    width: 100%;
+    margin-top: 1.5rem;
+
+    .buttons {
+      display: flex;
+      width: 100%;
+      height: 6rem;
+      border: 0.6rem $green solid;
+      background: linear-gradient(to bottom right, $lightPink, $pink);
+      border-radius: 2rem;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Pacifico', cursive;
+      color: white;
+      font-size: 2.25rem;
+      cursor: pointer;
+      transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.4s all;
+
+      &:hover {
+        background: linear-gradient(to top left, $lightPink, $pink);
+        font-size: 2.5rem;
+        transform: rotate(-1deg);
+      }
+
+      /*&:nth-child(even) { n gostei do resultado
+        &:hover {
+          transform: rotate(1deg);
+        }
+      }*/
+
+      &:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
