@@ -56,7 +56,7 @@ body {
   justify-content: center;
   align-items: center;
   font-family: "Pacifico", cursive;
-  color: white;
+  color: #f2f2f2;
   font-size: 2.25rem;
   cursor: pointer;
   transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.4s all;
@@ -73,4 +73,56 @@ body {
 }
 .centerContainer menu .buttons:not(:last-child) {
   margin-bottom: 1rem;
+}
+
+.players input[type=text] {
+  outline: none;
+  background-color: transparent;
+  border: 2px solid #f2f2f2;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-size: 1.25rem;
+  color: #f2f2f2;
+  font-family: "Montserrat", sans-serif;
+}
+.players .buttonHolder {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.players .buttonHolder button {
+  width: 80%;
+  outline: none;
+  height: 3.75rem;
+  font-size: 2rem;
+  border: 2px solid #b0302e;
+  color: #f2f2f2;
+  font-family: "Pacifico", cursive;
+  border-radius: 50px;
+  cursor: pointer;
+  background-color: #00b339;
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.2s all;
+}
+.players .buttonHolder button:hover {
+  transform: scale(1.05);
+}
+.players .icons span {
+  cursor: pointer;
+  font-size: 3rem;
+}
+.players .icons span:not(:last-child) {
+  margin-right: 0.25rem;
+}
+.players .icons .selected {
+  opacity: 1;
+}
+.players .icons .selected:nth-child(even) {
+  color: red;
+}
+.players .icons .selected:nth-child(odd) {
+  color: black;
+}
+.players .disabled {
+  opacity: 0.6;
 }/*# sourceMappingURL=menu.css.map */

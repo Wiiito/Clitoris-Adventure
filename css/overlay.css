@@ -85,6 +85,9 @@
     padding: 2rem 1.5rem 1rem 1.5rem;
   }
 }
+.overlay .form .box .info {
+  white-space: nowrap;
+}
 .overlay .form .box .input {
   display: flex;
   align-items: center;

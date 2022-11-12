@@ -59,7 +59,7 @@ body {
       justify-content: center;
       align-items: center;
       font-family: 'Pacifico', cursive;
-      color: white;
+      color: $white;
       font-size: 2.25rem;
       cursor: pointer;
       transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.4s all;
@@ -80,5 +80,70 @@ body {
         margin-bottom: 1rem;
       }
     }
+  }
+}
+
+//Player menu
+
+.players {
+  input[type='text'] {
+    outline: none;
+    background-color: transparent;
+    border: 2px solid $white;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 1.25rem;
+    color: $white;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .buttonHolder {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+
+    button {
+      width: 80%;
+      outline: none;
+      height: 3.75rem;
+      font-size: 2rem;
+      border: 2px solid $darkRed;
+      color: $white;
+      font-family: 'Pacifico', cursive;
+      border-radius: 50px;
+      cursor: pointer;
+      background-color: $green;
+      transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.2s all;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  .icons {
+    span {
+      cursor: pointer;
+      font-size: 3rem;
+      &:not(:last-child) {
+        margin-right: 0.25rem;
+      }
+    }
+
+    .selected {
+      opacity: 1;
+
+      &:nth-child(even) {
+        color: red;
+      }
+      &:nth-child(odd) {
+        color: black;
+      }
+    }
+  }
+
+  .disabled {
+    opacity: 0.6;
   }
 }
