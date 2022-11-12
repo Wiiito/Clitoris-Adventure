@@ -97,6 +97,10 @@ body {
     font-family: 'Montserrat', sans-serif;
   }
 
+  input[type='number'] {
+    display: none;
+  }
+
   .buttonHolder {
     display: flex;
     width: 100%;

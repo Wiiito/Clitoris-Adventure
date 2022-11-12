@@ -2,7 +2,7 @@ const menu = document.querySelector('.menuContainer')
 const playersDiv = document.querySelector('.players')
 const icons = playersDiv.querySelectorAll('.selectIcon')
 
-var playerIcons = ['♣', '♥', '♠', '♦']
+const playerIcons = ['♣', '♥', '♠', '♦']
 var selectedIcons = []
 
 const names = [
@@ -63,6 +63,8 @@ function selectIcon(icon, player) {
     icons[i]
       .querySelector('.icons')
       .children[playerIcons.indexOf(ico)].classList.add('selected')
+    playersDiv.querySelectorAll('[name="naipe"]')[i].value =
+      playerIcons.indexOf(ico)
   })
 }
 

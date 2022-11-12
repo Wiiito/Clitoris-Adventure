@@ -85,6 +85,9 @@ body {
   color: #f2f2f2;
   font-family: "Montserrat", sans-serif;
 }
+.players input[type=number] {
+  display: none;
+}
 .players .buttonHolder {
   display: flex;
   width: 100%;
