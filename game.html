@@ -4,9 +4,19 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/globals.css" />
+    <link rel="stylesheet" href="./css/timer.css" />
     <title>Jogando o jogo</title>
   </head>
   <body>
+    <div class="timer">
+      <h4 id="time">00:00</h4>
+      <canvas
+        id="myCanvas"
+        width="5000"
+        height="40"
+        style="border: 0px; display: inline-block"></canvas>
+    </div>
     <div class="players">
       <div class="player">
         <div class="score"></div>
@@ -29,6 +39,9 @@
         <div class="name"></div>
       </div>
     </div>
+    <button onclick="startTimer()">Chamar timer</button>
+    <button onclick="stopTimer()">Parar timer</button>
+    <script src="./js/logic/temporizador.js"></script>
     <script src="./js/logic/startingGame.js"></script>
   </body>
 </html>
