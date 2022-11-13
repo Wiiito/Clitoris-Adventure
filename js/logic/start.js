@@ -9,7 +9,7 @@ const names = [
   'Gatinha Comunista',
   'Ice',
   'Malu',
-  'Ramone',
+  'Ramonee',
   'Setinhaw',
   'Wiitin',
 ]
