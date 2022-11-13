@@ -145,3 +145,12 @@ body {
     opacity: 0.6;
   }
 }
+
+.credit {
+  text-align: center;
+  color: $white;
+  .name {
+    font-family: 'Pacifico', cursive;
+    font-size: 33px;
+  }
+}
