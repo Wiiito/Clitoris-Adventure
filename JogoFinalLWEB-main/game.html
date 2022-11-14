@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="./css/globals.css" />
+    <link rel="stylesheet" href="./css/timer.css" />
+    <link rel="stylesheet" href="./css/players.css" />
+    <link rel="stylesheet" href="./css/sperm.css">
+    <title>Jogando o jogo</title>
+  </head>
+  <body>
+    <div class="timer">
+      <h4 id="time">00:00</h4>
+      <canvas
+        id="myCanvas"
+        width="5000"
+        height="40"
+        style="border: 0px; display: inline-block"></canvas>
+    </div>
+    <div class="sperms">
+      <canvas class="sperm"
+      width="505"
+      height="200"
+      style="border: 0px; display: inline-block; z-index: 50;"></canvas>
+      <!--
+
+        <canvas class="sperm"
+        width="5000"
+        height="300"
+        style="border: 0px; display: inline-block"></canvas>
+        <canvas class="sperm"
+        width="5000"
+        height="300"
+        style="border: 0px; display: inline-block"></canvas>
+        <canvas class="sperm"
+        width="5000"
+        height="300"
+        style="border: 0px; display: inline-block"></canvas>
+      </div>
+    -->
+    <div class="players">
+      <div class="player">
+        <div class="score"></div>
+        <span class="icon"></span>
+        <div class="name"></div>
+      </div>
+      <div class="player">
+        <div class="score"></div>
+        <span class="icon"></span>
+        <div class="name"></div>
+      </div>
+      <div class="player">
+        <div class="score"></div>
+        <span class="icon"></span>
+        <div class="name"></div>
+      </div>
+      <div class="player">
+        <div class="score"></div>
+        <span class="icon"></span>
+        <div class="name"></div>
+      </div>
+    </div>
+    <div class="testsButtons">
+      <button onclick="startTimer()">Chamar timer</button>
+      <button onclick="stopTimer()">Parar timer</button>
+      <button onclick="addMargin()">AddMargin</button>
+      <button onclick="startAnimation()">Animar</button>
+      <button onclick="stopAnimation()">Parar</button>
+    </div>
+    <script src="./js/logic/temporizador.js"></script>
+    <script src="./js/logic/startingGame.js"></script>
+    <script src="./js/logic/sperm.js"></script>
+  </body>
+</html>

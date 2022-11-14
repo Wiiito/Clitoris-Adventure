@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="./css/menu.css" />
+    <link rel="stylesheet" href="./css/overlay.css" />
+    <link rel="stylesheet" href="./css/globals.css" />
+    <title>Jogo da Xereca</title>
+    <!-- Só temos um html para que possamos passar parametros do js entre "abas" e para que seja mais fluido -->
+  </head>
+  <body>
+    <div class="overlay">
+      <span class="close">X</span>
+
+      <!-- Configurações de som -->
+      <div class="settings">
+        <h3 class="title">Settings</h3>
+        <div class="form">
+          <div class="box">
+            <div class="info">Volume</div>
+            <div class="input"><input type="range" /></div>
+          </div>
+          <div class="box">
+            <div class="info">Music</div>
+            <div class="input"><input type="range" /></div>
+          </div>
+          <div class="box">
+            <div class="info">Effects</div>
+            <div class="input"><input type="range" /></div>
+          </div>
+        </div>
+      </div>
+      <!-- Quantidade de jogadores -->
+      <div class="players">
+        <h3 class="title">Players</h3>
+        <form class="form" method="GET" action="./game.html">
+          <div class="box">
+            <input type="text" class="info" value="" name="player0" />
+            <input type="number" name="naipe" />
+            <div class="input">
+              <div class="selectIcon"><div class="icons"></div></div>
+            </div>
+          </div>
+          <div class="box">
+            <input type="text" class="info" value="" name="player1" />
+            <input type="number" name="naipe" />
+            <div class="input">
+              <div class="selectIcon"><div class="icons"></div></div>
+            </div>
+          </div>
+          <div class="box">
+            <input type="text" class="info" value="" name="player2" />
+            <input type="number" name="naipe" />
+            <div class="input">
+              <div class="selectIcon"><div class="icons"></div></div>
+            </div>
+          </div>
+          <div class="box">
+            <input type="text" class="info" value="" name="player3" />
+            <input type="number" name="naipe" />
+            <div class="input">
+              <div class="selectIcon"><div class="icons"></div></div>
+            </div>
+          </div>
+          <div class="buttonHolder">
+            <button type="submit">Play</button>
+          </div>
+        </form>
+      </div>
+      <div class="credit">
+
+        <h3 class="title">Créditos</h3>
+        <div class="form">
+
+          <div class="name">Ellis (Comunista) Morenna Viana Silva</div>
+          <div class="name">Flávio (Wiito) Henrique de Sousa Saldanha</div>
+          <div class="name">Gabriel (Ice) Agostinho da Silva</div>
+          <div class="name">Luan (Setinhaw) Seta Ramos</div>
+          <div class="name">Maria Luiza (Malu) Ferreira Meireles</div>
+          <div class="name">Pedro (Ramonee) Guimarães de Deus Corrêa</div>
+      
+
+        </div>
+        
+      </div>
+
+    </div>
+    <div class="menuContainer">
+      <div class="centerContainer">
+        <div class="title">
+          <img src="./imgs/title.png" alt="Clitoris Adventure" class="title" />
+        </div>
+        <menu class="menu">
+          <div class="buttons" onclick="startGame()">Start</div>
+          <div class="buttons" onclick="callOverlay('settings')">Settings</div>
+          <div class="buttons" onclick="callOverlay('credit')">Credits</div>
+        </menu>
+      </div>
+      <div class="copyright"></div>
+    </div>
+
+    <!-- / Menu start \ -->
+
+    <script src="./js/overlay.js"></script>
+    <script src="./js/logic/start.js"></script>
+  </body>
+</html>
