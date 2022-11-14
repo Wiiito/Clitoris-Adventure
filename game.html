@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./css/globals.css" />
     <link rel="stylesheet" href="./css/timer.css" />
     <link rel="stylesheet" href="./css/players.css" />
+    <link rel="stylesheet" href="./css/sperm.css">
     <title>Jogando o jogo</title>
   </head>
   <body>
@@ -23,6 +24,27 @@
         height="40"
         style="border: 0px; display: inline-block"></canvas>
     </div>
+    <div class="sperms">
+      <canvas class="sperm"
+      width="505"
+      height="200"
+      style="border: 0px; display: inline-block; z-index: 50;"></canvas>
+      <!--
+
+        <canvas class="sperm"
+        width="5000"
+        height="300"
+        style="border: 0px; display: inline-block"></canvas>
+        <canvas class="sperm"
+        width="5000"
+        height="300"
+        style="border: 0px; display: inline-block"></canvas>
+        <canvas class="sperm"
+        width="5000"
+        height="300"
+        style="border: 0px; display: inline-block"></canvas>
+      </div>
+    -->
     <div class="players">
       <div class="player">
         <div class="score"></div>
@@ -45,9 +67,15 @@
         <div class="name"></div>
       </div>
     </div>
-    <button onclick="startTimer()">Chamar timer</button>
-    <button onclick="stopTimer()">Parar timer</button>
+    <div class="testsButtons">
+      <button onclick="startTimer()">Chamar timer</button>
+      <button onclick="stopTimer()">Parar timer</button>
+      <button onclick="addMargin()">AddMargin</button>
+      <button onclick="startAnimation()">Animar</button>
+      <button onclick="stopAnimation()">Parar</button>
+    </div>
     <script src="./js/logic/temporizador.js"></script>
     <script src="./js/logic/startingGame.js"></script>
+    <script src="./js/logic/sperm.js"></script>
   </body>
 </html>

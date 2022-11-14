@@ -10,7 +10,7 @@ const names = [
   'Ice',
   'Malu',
   'Ramonee',
-  'Setinhaw',
+  'Setinha Love',
   'Wiitin',
 ]
 
