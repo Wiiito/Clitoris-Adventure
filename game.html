@@ -14,9 +14,17 @@
     <link rel="stylesheet" href="./css/players.css" />
     <link rel="stylesheet" href="./css/sperm.css" />
     <link rel="stylesheet" href="./css/question.css" />
+    <link rel="stylesheet" href="./css/dado.css" />
     <title>Jogando o jogo</title>
   </head>
   <body>
+    <audio
+      preload
+      id="dadoRolando"
+      src="./audios/audios_dado-rolando.mp3"
+      type="audio/mpeg"></audio>
+    <audio id="music" src="./audios/audios_lobby-classic-game.mp3" loop></audio>
+
     <div class="sperms">
       <canvas
         class="sperm"
@@ -39,6 +47,10 @@
         style="border: 0px; display: inline-block"></canvas>
       </div>
     --></div>
+
+    <div class="dado">
+      <img src="imgs/0.png" alt="Dado" id="imgDado" />
+    </div>
 
     <div class="players">
       <div class="player">
@@ -84,19 +96,20 @@
     </div>
 
     <div class="testsButtons">
-      <button onclick="startTimer()">Chamar timer</button>
-      <button onclick="stopTimer()">Parar timer</button>
       <button onclick="addMargin(0)">AddMargin</button>
       <button onclick="startAnimation()">Animar</button>
       <button onclick="stopAnimation()">Parar</button>
       <button onclick="callQuestion(1)">Perguntas</button>
+      <button onclick="rollDice()">Rolar dado</button>
     </div>
 
     <script src="./js/logic/temporizador.js"></script>
     <script src="./js/logic/startingGame.js"></script>
+    <script src="./js/dado.js"></script>
     <script src="./js/logic/sperm.js"></script>
     <script src="./js/logic/callQuestion.js"></script>
     <script src="./js/logic/game/answers.js"></script>
     <script src="./js/logic/game/walkSperm.js"></script>
+    <script src="./js/audio.js"></script>
   </body>
 </html>

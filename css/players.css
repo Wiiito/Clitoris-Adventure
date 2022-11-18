@@ -30,9 +30,9 @@
 }
 .players .player .icon {
   position: absolute;
-  left: -4rem;
-  top: -8rem;
-  font-size: 15rem;
+  left: -4vw;
+  top: -8vw;
+  font-size: 15vw;
   transform: rotate(-28deg);
   pointer-events: none;
 }
