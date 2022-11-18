@@ -24,6 +24,8 @@ function startTimer() {
 
 function stopTimer() {
   timer.style.display = 'none'
+  wrongAnswer()
+  closeQuestion()
   clearInterval(intervalId)
   timerCtx.clearRect(0, 0, 5000, 40)
 }

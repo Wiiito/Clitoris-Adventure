@@ -3,5 +3,5 @@
   display: flex;
   align-items: center;
   transform: scale(0.2);
-}
-/*# sourceMappingURL=sperm.css.map */
+  transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.4s;
+}/*# sourceMappingURL=sperm.css.map */

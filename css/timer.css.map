@@ -1,10 +1,1 @@
-{
-    "version": 3,
-    "mappings": "AAEA,AAAA,MAAM,CAAC;EACL,QAAQ,EAAE,KAAK;EACf,OAAO,EAAE,IAAI;EACb,WAAW,EAAE,MAAM;CAQpB;;AAXD,AAKE,MALI,CAKJ,KAAK,CAAC;EACJ,WAAW,EAAE,wBAAwB;EACrC,QAAQ,EAAE,QAAQ;EAClB,YAAY,EAAE,MAAM;EACpB,KAAK,ECND,OAAO;CDOZ",
-    "sources": [
-        "../scss/timer.scss",
-        "../scss/_colors.scss"
-    ],
-    "names": [],
-    "file": "timer.css"
-}
+{"version":3,"sourceRoot":"","sources":["../scss/timer.scss","../scss/_colors.scss"],"names":[],"mappings":"AAEA;EACE;EACA;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA,OCRI","file":"timer.css"}

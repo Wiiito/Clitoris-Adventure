@@ -2,7 +2,7 @@ const queryString = window.location.search
 const urlParams = new URLSearchParams(queryString)
 
 const playerIcons = ['♣', '♥', '♠', '♦']
-const players = [
+var players = [
   {
     name: urlParams.get('player0'),
     icon: urlParams.getAll('naipe')[0] || 0,

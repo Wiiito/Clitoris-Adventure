@@ -1,9 +1,1 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,MAAM,CAAC;EACH,QAAQ,EAAE,KAAK;EACf,OAAO,EAAE,IAAI;EACb,WAAW,EAAE,MAAM;EACnB,SAAS,EAAE,UAAS;CACvB",
-    "sources": [
-        "../scss/sperm.scss"
-    ],
-    "names": [],
-    "file": "sperm.css"
-}
+{"version":3,"sourceRoot":"","sources":["../scss/sperm.scss"],"names":[],"mappings":"AAAA;EACE;EACA;EACA;EACA;EACA","file":"sperm.css"}

@@ -12,23 +12,17 @@
     <link rel="stylesheet" href="./css/globals.css" />
     <link rel="stylesheet" href="./css/timer.css" />
     <link rel="stylesheet" href="./css/players.css" />
-    <link rel="stylesheet" href="./css/sperm.css">
+    <link rel="stylesheet" href="./css/sperm.css" />
+    <link rel="stylesheet" href="./css/question.css" />
     <title>Jogando o jogo</title>
   </head>
   <body>
-    <div class="timer">
-      <h4 id="time">00:00</h4>
-      <canvas
-        id="myCanvas"
-        width="5000"
-        height="40"
-        style="border: 0px; display: inline-block"></canvas>
-    </div>
     <div class="sperms">
-      <canvas class="sperm"
-      width="505"
-      height="200"
-      style="border: 0px; display: inline-block; z-index: 50;"></canvas>
+      <canvas
+        class="sperm"
+        width="505"
+        height="200"
+        style="border: 0px; display: inline-block; z-index: 50"></canvas>
       <!--
 
         <canvas class="sperm"
@@ -44,7 +38,8 @@
         height="300"
         style="border: 0px; display: inline-block"></canvas>
       </div>
-    -->
+    --></div>
+
     <div class="players">
       <div class="player">
         <div class="score"></div>
@@ -67,15 +62,41 @@
         <div class="name"></div>
       </div>
     </div>
+
+    <div class="question">
+      <div class="timer">
+        <h4 id="time">00:00</h4>
+        <canvas
+          id="myCanvas"
+          width="5000"
+          height="40"
+          style="border: 0px; display: inline-block"></canvas>
+      </div>
+      <div class="centerContent">
+        <div class="questionsTitle"></div>
+        <div class="answers">
+          <button onclick="answer(this)"></button>
+          <button onclick="answer(this)"></button>
+          <button onclick="answer(this)"></button>
+          <button onclick="answer(this)"></button>
+        </div>
+      </div>
+    </div>
+
     <div class="testsButtons">
       <button onclick="startTimer()">Chamar timer</button>
       <button onclick="stopTimer()">Parar timer</button>
-      <button onclick="addMargin()">AddMargin</button>
+      <button onclick="addMargin(0)">AddMargin</button>
       <button onclick="startAnimation()">Animar</button>
       <button onclick="stopAnimation()">Parar</button>
+      <button onclick="callQuestion(1)">Perguntas</button>
     </div>
+
     <script src="./js/logic/temporizador.js"></script>
     <script src="./js/logic/startingGame.js"></script>
     <script src="./js/logic/sperm.js"></script>
+    <script src="./js/logic/callQuestion.js"></script>
+    <script src="./js/logic/game/answers.js"></script>
+    <script src="./js/logic/game/walkSperm.js"></script>
   </body>
 </html>

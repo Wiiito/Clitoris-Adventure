@@ -1,0 +1,34 @@
+{
+  "questions": [
+    {
+      "question": "Casa 0, pergunta 1: realmente muito intrigante, intrigante mesmo viu, wow, como intriga essa pergunta, ô meu deus, que pergunta intrigante",
+      "rightAnswer": "Com certeza é essa a resposta",
+      "wrongAnswers": ["respostaErrada1", "respostaErrada2", "respostaErrada3"]
+    },
+    {
+      "question": "Casa 0, pergunta 2: 2 viu, wow, como intriga essa pergunta, ô meu deus, que pergunta intrigante",
+      "rightAnswer": "Com certeza é essa a resposta",
+      "wrongAnswers": ["respostaErrada1", "respostaErrada2", "respostaErrada3"]
+    },
+    {
+      "question": "Casa 0, pergunta 3: 3 Pariatur ad occaecat nisi ex aliqua laborum cupidatat aliquip et sunt tempor magna laboris non.",
+      "rightAnswer": "Com certeza é essa a resposta",
+      "wrongAnswers": ["respostaErrada1", "respostaErrada2", "respostaErrada3"]
+    },
+    {
+      "question": "Casa 1, pergunta 1: e realmente muito intrigante, intrigante mesmo viu, wow, como intriga essa pergunta, ô meu deus, que pergunta intrigante",
+      "rightAnswer": "Com certeza é essa a resposta",
+      "wrongAnswers": ["respostaErrada1", "respostaErrada2", "respostaErrada3"]
+    },
+    {
+      "question": "Casa 1, pergunta 2: viu, wow, como intriga essa pergunta, ô meu deus, que pergunta intrigante",
+      "rightAnswer": "Com certeza é essa a resposta",
+      "wrongAnswers": ["respostaErrada1", "respostaErrada2", "respostaErrada3"]
+    },
+    {
+      "question": "Casa 1, pergunta 3: Pariatur ad occaecat nisi ex aliqua laborum cupidatat aliquip et sunt tempor magna laboris non.",
+      "rightAnswer": "Com certeza é essa a resposta",
+      "wrongAnswers": ["respostaErrada1", "respostaErrada2", "respostaErrada3"]
+    }
+  ]
+}
