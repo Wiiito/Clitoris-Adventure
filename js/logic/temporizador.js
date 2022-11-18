@@ -1,6 +1,6 @@
 const timer = document.querySelector('.timer')
 const c = document.getElementById('myCanvas')
-const ctx = c.getContext('2d')
+const timerCtx = c.getContext('2d')
 
 var segundos = 0
 var intervalId
@@ -24,15 +24,17 @@ function startTimer() {
 
 function stopTimer() {
   timer.style.display = 'none'
+  wrongAnswer()
+  closeQuestion()
   clearInterval(intervalId)
-  ctx.clearRect(0, 0, 5000, 40)
+  timerCtx.clearRect(0, 0, 5000, 40)
 }
 
 function animate() {
-  ctx.beginPath()
-  ctx.arc(x, 20, 20, 0, 2 * Math.PI)
-  ctx.fillStyle = 'rgb(166, 49, 172)'
-  ctx.fill()
-  ctx.closePath()
+  timerCtx.beginPath()
+  timerCtx.arc(x, 20, 20, 0, 2 * Math.PI)
+  timerCtx.fillStyle = 'rgb(166, 49, 172)'
+  timerCtx.fill()
+  timerCtx.closePath()
   x = x + window.innerWidth / 250
 }

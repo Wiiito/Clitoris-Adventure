@@ -152,5 +152,9 @@ body {
   .name {
     font-family: 'Pacifico', cursive;
     font-size: 33px;
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+      border-bottom: 1px solid $white;
+    }
   }
 }

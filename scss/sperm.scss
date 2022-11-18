@@ -1,0 +1,7 @@
+.sperm {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  transform: scale(0.2);
+  transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.4s;
+}
