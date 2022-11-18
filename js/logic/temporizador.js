@@ -15,6 +15,7 @@ function seconds() {
 }
 
 function startTimer() {
+  clearTimer()
   timer.style.display = 'flex'
   segundos = 0
   x = 0
@@ -23,10 +24,12 @@ function startTimer() {
 }
 
 function stopTimer() {
-  timer.style.display = 'none'
-  wrongAnswer()
-  closeQuestion()
   clearInterval(intervalId)
+  return segundos
+}
+
+function clearTimer() {
+  timer.style.display = 'none'
   timerCtx.clearRect(0, 0, 5000, 40)
 }
 

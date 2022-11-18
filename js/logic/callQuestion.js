@@ -8,8 +8,8 @@ async function getQuestions() {
 var usedQuestions = []
 
 const questionContainer = document.querySelector('.question')
-const questionTitle = document.querySelector('.questionsTitle')
-const ansewrs = document.querySelector('.answers')
+const questionTitle = document.querySelector('.questionsTitle').children[0]
+const ansewrs = document.querySelector('.answers').children
 
 async function callQuestion(house) {
   //Passa o número da casa, a função calcula sozinha qual pergunta usar
@@ -29,7 +29,9 @@ async function callQuestion(house) {
 
   const answerLoc = Math.floor(Math.random() * 4) //Pegando um indice para a pergunta certa
 
-  ansewrs.children[answerLoc].innerText = questions[dificulty].rightAnswer //Escrevendo a pergunta certa
+  //Limpandos estilos dos botões
+
+  ansewrs[answerLoc].innerText = questions[dificulty].rightAnswer //Escrevendo a pergunta certa
 
   usedBoxes.splice(answerLoc, 1) // Tirando a caixa usada pela pergunta certa
 
@@ -45,7 +47,7 @@ async function callQuestion(house) {
 
   usedBoxes.forEach((res, i) => {
     //Escrevendo as perguntas erradas
-    ansewrs.children[res].innerText = wrongAnswers[i]
+    ansewrs[res].innerText = wrongAnswers[i]
   })
 
   usedQuestions.push(dificulty)
@@ -58,14 +60,20 @@ async function answer(e) {
   const lastQuest = usedQuestions[usedQuestions.length - 1]
   const { questions } = await getQuestions()
   if (clickedAnswer === questions[lastQuest].rightAnswer) {
+    e.style.backgroundColor = '#00b339'
     rightAnswer()
-    closeQuestion()
   } else {
+    e.style.backgroundColor = '#b0302e'
     wrongAnswer()
-    closeQuestion()
   }
+  setTimeout(() => {
+    closeQuestion()
+  }, 500)
 }
 
 function closeQuestion() {
   questionContainer.style.height = '0vh'
+  for (i = 0; i < ansewrs.length; i++) {
+    ansewrs[i].style.backgroundColor = '#fc5e5b'
+  }
 }
