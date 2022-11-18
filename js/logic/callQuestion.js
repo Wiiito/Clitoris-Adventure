@@ -63,7 +63,7 @@ async function answer(e) {
     e.style.backgroundColor = '#00b339'
     rightAnswer()
   } else {
-    e.style.backgroundColor = '#b0302e'
+    e.style.backgroundColor = '#c4221f'
     wrongAnswer()
   }
   setTimeout(() => {
