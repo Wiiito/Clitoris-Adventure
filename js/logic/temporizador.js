@@ -20,7 +20,10 @@ function startTimer() {
   segundos = 0
   x = 0
   intervalId = setInterval(seconds, 1000 / (10 / 3 / 0.4))
-  setTimeout(stopTimer, 30 * 1000)
+  setTimeout(() => {
+    stopTimer()
+    setTimeout(closeQuestion, 500)
+  }, 30 * 1000)
 }
 
 function stopTimer() {
