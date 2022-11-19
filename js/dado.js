@@ -1,10 +1,11 @@
 // SELECIONAR ELEMENTOS
 let numeroSorteado = 0
 let imgDado = document.querySelector('#imgDado')
-let btnSortear = document.querySelector('rollDice')
 let dadoRolando = document.querySelector('#dadoRolando')
+const diceBtn = document.querySelector('.diceRoll')
 
 function rollDice() {
+  hideDiceButon()
   //Limpando ultimo número sorteado
   imgDado.style.display = 'block'
   imgDado.setAttribute('src', 'imgs/0.png')
@@ -15,23 +16,33 @@ function rollDice() {
   // tocar o efeito sonoro
   dadoRolando.play()
 
+  const randNum = getRandomInt(1, 6)
+
   // usar setTimeout para executar as acoes apos 1.25 segundos
   setTimeout(function () {
     // ARMAZENAR NUMERO SORTEADO NA VARIAVEL
-    numeroSorteado = getRandomInt(1, 6)
-
+    numeroSorteado = randNum
     // definir atributo src com base no numero
     imgDado.setAttribute('src', 'imgs/' + numeroSorteado + '.png')
 
     // retirar a animacao
     imgDado.classList.remove('animar')
   }, 1250)
+  return randNum
 }
 
 imgDado.addEventListener('click', hideDice)
 
 function hideDice() {
   imgDado.style.display = 'none'
+  movePlayer(turn, houses)
+  setTimeout(() => {
+    callQuestion(players[turn].score)
+  }, 2000)
+}
+
+function hideDiceButon() {
+  diceBtn.style.display = 'none'
 }
 
 // FUNCAO que gera numero randomico inteiro

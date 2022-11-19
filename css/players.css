@@ -6,6 +6,24 @@
   left: 50%;
   width: 100%;
 }
+.players .diceRoll {
+  position: absolute;
+  width: 17vw;
+  margin-left: 6.4vw;
+  top: -4vw;
+  height: 5vw;
+  cursor: pointer;
+  background-color: #fd6196;
+  border-radius: 1rem 1rem 0 0;
+  color: #f2f2f2;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 2vw;
+}
+.players .diceRoll span {
+  position: relative;
+  z-index: 75;
+}
 .players .player {
   position: relative;
   width: 17vw;

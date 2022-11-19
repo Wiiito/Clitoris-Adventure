@@ -31,6 +31,9 @@
     </div>
 
     <div class="players">
+      <button class="diceRoll" onclick="startPlay()">
+        <span>Roll Dice</span>
+      </button>
       <div class="player">
         <div class="score"></div>
         <span class="icon"></span>
@@ -73,14 +76,6 @@
       </div>
     </div>
 
-    <div class="testsButtons">
-      <button onclick="movePlayer(0, 1)">AddMargin</button>
-      <button onclick="startAnimation()">Animar</button>
-      <button onclick="stopAnimation()">Parar</button>
-      <button onclick="callQuestion(1)">Perguntas</button>
-      <button onclick="rollDice()">Rolar dado</button>
-    </div>
-
     <div class="boardHolder">
       <div class="sperms">
         <canvas
@@ -116,5 +111,6 @@
     <script src="./js/logic/game/board.js"></script>
     <script src="./js/logic/game/walkSperm.js"></script>
     <script src="./js/audio.js"></script>
+    <script src="./js/logic/game/turn.js"></script>
   </body>
 </html>

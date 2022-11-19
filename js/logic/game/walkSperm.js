@@ -43,8 +43,11 @@ function movePlayer(player, houses) {
   changePlayer(player)
   startAnimation()
   totalPosX[player] -= houses * houseWidth
+  players[player].score += houses
 
   sperms[player].style.marginLeft = -totalPosX[player] + 'px'
   sperms[player].style.marginTop = -totalPosY[player] + 'px'
-  setTimeout(stopAnimation, 2000)
+  setTimeout(() => {
+    stopAnimation()
+  }, 2000)
 }
