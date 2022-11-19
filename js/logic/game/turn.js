@@ -15,12 +15,13 @@ function startPlay() {
 }
 
 function turnPlay() {
+  updatePlayers()
   clearColor()
   turn++
   if (turn >= players.length) {
     turn = 0
   }
-  const currentPlayer = players[turn]
+
   const player = playerContaier.querySelectorAll('.player')[turn]
   player.style.backgroundColor = '#00b339'
   diceBtn.style.marginLeft = `calc(6.4vw + ${(6.4 + 17) * turn}vw)`
