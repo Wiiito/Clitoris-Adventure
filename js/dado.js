@@ -31,6 +31,8 @@ function rollDice() {
     movePlayer(turn, houses)
     setTimeout(() => {
       hideDice()
+    }, 2000)
+    setTimeout(() => {
       callQuestion(players[turn].score)
     }, 4000)
   }, 1250)

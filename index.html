@@ -12,10 +12,16 @@
     <link rel="stylesheet" href="./css/menu.css" />
     <link rel="stylesheet" href="./css/overlay.css" />
     <link rel="stylesheet" href="./css/globals.css" />
-    <title>Jogo da Xereca</title>
+    <title>Clitoris Adventure</title>
     <!-- Só temos um html para que possamos passar parametros do js entre "abas" e para que seja mais fluido -->
   </head>
   <body>
+    <audio id="music" src="./audios/audios_lobby-classic-game.mp3" loop></audio>
+    <audio
+      preload
+      id="dadoRolando"
+      src="./audios/audios_dado-rolando.mp3"
+      type="audio/mpeg"></audio>
     <audio id="music" src="./audios/audios_lobby-classic-game.mp3" loop></audio>
 
     <div class="overlay">
@@ -27,15 +33,30 @@
         <div class="form">
           <div class="box">
             <div class="info">Volume</div>
-            <div class="input"><input type="range" /></div>
+            <div class="input">
+              <input
+                type="range"
+                name="general"
+                onchange="changeSongsValue(this)" />
+            </div>
           </div>
           <div class="box">
             <div class="info">Music</div>
-            <div class="input"><input type="range" /></div>
+            <div class="input">
+              <input
+                type="range"
+                name="song"
+                onchange="changeSongsValue(this)" />
+            </div>
           </div>
           <div class="box">
             <div class="info">Effects</div>
-            <div class="input"><input type="range" /></div>
+            <div class="input">
+              <input
+                type="range"
+                name="effects"
+                onchange="changeSongsValue(this)" />
+            </div>
           </div>
         </div>
       </div>
