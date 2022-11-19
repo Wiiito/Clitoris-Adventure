@@ -1,0 +1,30 @@
+@import 'mixins';
+@import 'colors';
+
+body {
+  //N me pergunta pq coloquei isso aq...
+  background-color: rgba($green, 0.3);
+}
+
+.boardHolder {
+  position: absolute;
+  width: 100vw;
+  height: 85vh;
+  top: 0;
+  left: 0;
+  z-index: -10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    height: calc(900vw / 16);
+    max-height: 100%;
+    width: 100%;
+    pointer-events: none;
+
+    @include breakpoint-up('large') {
+      max-width: calc(85vh * 16 / 9);
+    }
+  }
+}
