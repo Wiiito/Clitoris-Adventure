@@ -27,18 +27,18 @@ function rollDice() {
 
     // retirar a animacao
     imgDado.classList.remove('animar')
+
+    movePlayer(turn, houses)
+    setTimeout(() => {
+      hideDice()
+      callQuestion(players[turn].score)
+    }, 2000)
   }, 1250)
   return randNum
 }
 
-imgDado.addEventListener('click', hideDice)
-
 function hideDice() {
   imgDado.style.display = 'none'
-  movePlayer(turn, houses)
-  setTimeout(() => {
-    callQuestion(players[turn].score)
-  }, 2000)
 }
 
 function hideDiceButon() {

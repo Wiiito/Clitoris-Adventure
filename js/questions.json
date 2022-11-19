@@ -3,7 +3,11 @@
     {
       "question": "Casa 0, pergunta 1: realmente muito intrigante, intrigante mesmo viu, wow, como intriga essa pergunta, ô meu deus, que pergunta intrigante",
       "rightAnswer": "Com certeza é essa a resposta",
-      "wrongAnswers": ["respostaErrada1", "respostaErrada2", "respostaErrada3"]
+      "wrongAnswers": [
+        "o período em que os óvulos se esgotam, gerando o término da menstruação e da fertilidade",
+        "é o espaço de tempo entre duas menstruações, que se inicia após o término de uma e termina antes do início da outra.",
+        "o período entre o início de uma menstruação e outra"
+      ]
     },
     {
       "question": "Casa 0, pergunta 2: 2 viu, wow, como intriga essa pergunta, ô meu deus, que pergunta intrigante",
@@ -12,7 +16,7 @@
     },
     {
       "question": "Casa 0, pergunta 3: 3 Pariatur ad occaecat nisi ex aliqua laborum cupidatat aliquip et sunt tempor magna laboris non.",
-      "rightAnswer": "Com certeza é essa a resposta",
+      "rightAnswer": "também conhecido como menstruação, é o período em que o corpo que elimina o material proveniente da não fecundação de um óvulo.",
       "wrongAnswers": ["respostaErrada1", "respostaErrada2", "respostaErrada3"]
     },
     {
