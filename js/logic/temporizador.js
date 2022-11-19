@@ -22,6 +22,7 @@ function startTimer() {
   x = 0
   intervalId = setInterval(seconds, 1000 / (10 / 3 / 0.4))
   timeoutId = setTimeout(() => {
+    wrongAnswer()
     stopTimer()
     setTimeout(closeQuestion, 500)
   }, 30 * 1000)
