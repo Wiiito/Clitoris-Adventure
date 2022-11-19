@@ -43,7 +43,7 @@ function ppk() {
   //flagelo
   //Linha de cima
   ctx.beginPath()
-  ctx.strokeStyle = 'black'
+  ctx.strokeStyle = 'white'
   ctx.lineWidth = 5
   ctx.lineTo(0, (lado + 300) / 4)
   ctx.quadraticCurveTo(100, lado, 195, 95)
@@ -53,7 +53,7 @@ function ppk() {
   ctx.lineTo(410, 120)
   ctx.quadraticCurveTo(295, lado2, 195, 105)
   ctx.quadraticCurveTo(100, lado - 5, 0, (lado + 300) / 4)
-  ctx.fillStyle = 'black'
+  ctx.fillStyle = 'white'
   ctx.fill()
   ctx.stroke()
   ctx.closePath()
@@ -64,16 +64,10 @@ function ppk() {
   ctx.quadraticCurveTo(410, 160, 480, 125) //Baixo
   ctx.quadraticCurveTo(525, 100, 480, 75) //Frente
   ctx.quadraticCurveTo(410, 40, 400, 100) //Cima
-  ctx.fillStyle = 'pink'
+  ctx.fillStyle = 'white'
   ctx.fill()
   ctx.stroke()
   ctx.closePath()
-}
-
-var i
-function addMargin() {
-  canvas.style.marginLeft = `${i * 50}px`
-  i++
 }
 
 for (let i = 0; i < 4; i++) {

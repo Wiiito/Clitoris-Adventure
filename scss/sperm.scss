@@ -17,6 +17,6 @@
     display: flex;
     top: 0;
     left: 0;
-    transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.4s;
+    transition: all ease-in-out 2s;
   }
 }
