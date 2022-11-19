@@ -1,7 +1,22 @@
-.sperm {
-  position: fixed;
-  display: flex;
-  align-items: center;
-  //transform: scale(0.2);
-  transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.4s;
+@import 'mixins';
+
+.sperms {
+  position: relative;
+  height: calc(900vw / 16);
+  max-height: 100%;
+  width: 100%;
+  pointer-events: none;
+  z-index: 100;
+
+  @include breakpoint-up('large') {
+    max-width: calc(85vh * 16 / 9);
+  }
+
+  .sperm {
+    position: absolute;
+    display: flex;
+    top: 0;
+    left: 0;
+    transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.4s;
+  }
 }

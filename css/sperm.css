@@ -1,6 +1,20 @@
-.sperm {
-  position: fixed;
+.sperms {
+  position: relative;
+  height: 56.25vw;
+  max-height: 100%;
+  width: 100%;
+  pointer-events: none;
+  z-index: 100;
+}
+@media (min-width: 64em) {
+  .sperms {
+    max-width: 151.1111111111vh;
+  }
+}
+.sperms .sperm {
+  position: absolute;
   display: flex;
-  align-items: center;
+  top: 0;
+  left: 0;
   transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.4s;
 }/*# sourceMappingURL=sperm.css.map */

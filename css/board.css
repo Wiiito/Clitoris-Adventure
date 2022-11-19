@@ -14,6 +14,7 @@ body {
   align-items: center;
 }
 .boardHolder img {
+  position: absolute;
   height: 56.25vw;
   max-height: 100%;
   width: 100%;
