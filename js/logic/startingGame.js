@@ -7,21 +7,25 @@ var players = [
     name: urlParams.get('player0'),
     icon: urlParams.getAll('naipe')[0] || 0,
     score: 0,
+    points: 0,
   },
   {
     name: urlParams.get('player1'),
     icon: urlParams.getAll('naipe')[1] || 1,
     score: 0,
+    points: 0,
   },
   {
     name: urlParams.get('player2'),
     icon: urlParams.getAll('naipe')[2] || 2,
     score: 0,
+    points: 0,
   },
   {
     name: urlParams.get('player3'),
     icon: urlParams.getAll('naipe')[3] || 3,
     score: 0,
+    points: 0,
   },
 ]
 

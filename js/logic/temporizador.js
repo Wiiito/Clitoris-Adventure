@@ -4,6 +4,7 @@ const timerCtx = c.getContext('2d')
 
 var segundos = 0
 var intervalId
+var timeoutId
 var x = 0
 
 function seconds() {
@@ -20,7 +21,7 @@ function startTimer() {
   segundos = 0
   x = 0
   intervalId = setInterval(seconds, 1000 / (10 / 3 / 0.4))
-  setTimeout(() => {
+  timeoutId = setTimeout(() => {
     stopTimer()
     setTimeout(closeQuestion, 500)
   }, 30 * 1000)
@@ -28,6 +29,7 @@ function startTimer() {
 
 function stopTimer() {
   clearInterval(intervalId)
+  clearTimeout(timeoutId)
   return segundos
 }
 

@@ -55,7 +55,9 @@ async function callQuestion(house) {
 }
 
 async function answer(e) {
-  stopTimer()
+  const points = stopTimer()
+  players[turn].points += ((30000 - points) / 100) * houses
+
   const clickedAnswer = e.innerText
   const lastQuest = usedQuestions[usedQuestions.length - 1]
   const { questions } = await getQuestions()

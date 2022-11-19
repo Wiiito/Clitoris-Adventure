@@ -17,6 +17,7 @@ function startPlay() {
 function turnPlay() {
   updatePlayers()
   clearColor()
+
   turn++
   if (turn >= players.length) {
     turn = 0
