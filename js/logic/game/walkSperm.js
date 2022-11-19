@@ -49,5 +49,5 @@ function movePlayer(player, houses) {
   sperms[player].style.marginTop = -totalPosY[player] + 'px'
   setTimeout(() => {
     stopAnimation()
-  }, 2000)
+  }, 3000)
 }

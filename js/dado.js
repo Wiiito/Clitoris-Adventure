@@ -32,7 +32,7 @@ function rollDice() {
     setTimeout(() => {
       hideDice()
       callQuestion(players[turn].score)
-    }, 2000)
+    }, 4000)
   }, 1250)
   return randNum
 }

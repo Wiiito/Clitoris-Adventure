@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["../scss/dado.scss"],"names":[],"mappings":"AAAA;EACE;EACA;;;AAGF;EACE;IACE;IACA;IACA;;EAEF;IACE;;EAEF;IACE;IACA;IACA;;;AAIJ;EACE;IACE;;EAEF;IACE;;;AAIJ;EACE;AACA;AAAA;AAAA;AAAA;AAAA;;;AAOF;EACE","file":"dado.css"}
+{"version":3,"sourceRoot":"","sources":["../scss/dado.scss"],"names":[],"mappings":"AAAA;EACE;EACA;EACA;EACA;;;AAGF;EACE;EACA;;;AAGF;EACE;IACE;IACA;IACA;;EAEF;IACE;;EAEF;IACE;IACA;IACA;;;AAIJ;EACE;IACE;;EAEF;IACE;;;AAIJ;EACE;AACA;AAAA;AAAA;AAAA;AAAA;;;AAOF;EACE","file":"dado.css"}

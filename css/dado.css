@@ -1,5 +1,12 @@
+.dado {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 40vh;
+  left: 50%;
+}
+
 #imgDado {
-  width: 200px;
+  width: 20vw;
   display: none;
 }
 
