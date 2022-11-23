@@ -42,34 +42,146 @@ for (let i = 0; i < 4; i++) {
 function movePlayer(player, houses) {
   changePlayer(player)
 
-  let housesLeft = houses, actualHouse = players[player].score
+  let housesLeft = houses,
+    actualHouse = players[player].score
   players[player].score += houses
-  if (players[player].score > 6 && players[player].score <= 8) {
-    totalPosX[player] = ((sperms[player].width - (sperms[player].width / scale)) / 2) - minLeftMargin - ((randomPosX[player] * scale ** -1) / 0.2) - (houseWidth * 6)
+
+  if (players[player].score >= 6 && players[player].score <= 8) {
+    totalPosX[player] =
+      (sperms[player].width - sperms[player].width / scale) / 2 -
+      minLeftMargin -
+      (randomPosX[player] * scale ** -1) / 0.2 -
+      houseWidth * 6
     housesLeft = actualHouse + houses - 6
-    sperms[player].style.transitionDuration = `${(500 * (6 - housesLeft))/1000}s`
+    sperms[player].style.transitionDuration = `${
+      (500 * (6 - housesLeft)) / 1000
+    }s`
     move(player, (6 - housesLeft) * 500)
+
     setTimeout(() => {
       sperms[player].style.transitionDuration = `0.5s`
       sperms[player].style.transform = `rotate(90deg) scale(${scale ** -1})`
       setTimeout(() => {
         totalPosY[player] -= Math.min(housesLeft, 2) * houseHeight
-        sperms[player].style.transitionDuration = `${(500 * Math.min(housesLeft, 2))/1000}s`
+        sperms[player].style.transitionDuration = `${
+          (500 * Math.min(housesLeft, 2)) / 1000
+        }s`
         move(player, Math.min(housesLeft, 2) * 500)
       }, 500)
     }, (6 - housesLeft) * 500)
-  } else if(players[player].score > 8 && players[player].score <= 14) {
-    //Saindo da casa 8
-    sperms[player].style.transitionDuration = `0.5s`
-    sperms[player].style.transform = `rotate(180deg) scale(${scale ** -1})`
+  } else if (players[player].score > 8 && players[player].score <= 14) {
+    var downHouses
+    if (actualHouse <= 6) {
+      totalPosX[player] =
+        (sperms[player].width - sperms[player].width / scale) / 2 -
+        minLeftMargin -
+        (randomPosX[player] * scale ** -1) / 0.2 -
+        houseWidth * 6
+
+      sperms[player].style.transitionDuration = `0.5s`
+      move(player, 500)
+
+      housesLeft = actualHouse + houses - 6
+
+      downHouses = 2
+    } else {
+      downHouses = Math.max(8 - actualHouse, 0)
+    }
+    if (downHouses) {
+      sperms[player].style.transitionDuration = `0.5s`
+      sperms[player].style.transform = `rotate(90deg) scale(${scale ** -1})`
+    }
     setTimeout(() => {
-      sperms[player].style.transitionDuration = `3s`
-      totalPosX[player] += houses * houseWidth
-      move(player, 3000)
-    }, 500);
+      totalPosY[player] -= downHouses * houseHeight
+      sperms[player].style.transitionDuration = `${
+        (downHouses * 500 * Math.min(housesLeft, 2)) / 1000
+      }s`
+      move(player, (downHouses + 1) * 500)
+
+      setTimeout(() => {
+        //Saindo da casa 8
+        housesLeft = housesLeft - downHouses
+        sperms[player].style.transitionDuration = `0.5s`
+        sperms[player].style.transform = `rotate(180deg) scale(${scale ** -1})`
+        setTimeout(() => {
+          sperms[player].style.transitionDuration = `3s`
+          totalPosX[player] += housesLeft * houseWidth
+          move(player, 3000)
+        }, 500)
+      }, (downHouses + 1) * 500)
+    }, 500)
+  } else if (players[player].score >= 14 && players[player].score <= 16) {
+    totalPosX[player] =
+      (sperms[player].width - sperms[player].width / scale) / 2 -
+      minLeftMargin -
+      (randomPosX[player] * scale ** -1) / 0.2
+
+    housesLeft = actualHouse + houses - 14
+    sperms[player].style.transitionDuration = `${
+      ((14 - actualHouse) * 500) / 1000
+    }s`
+    move(player, (14 - actualHouse) * 500)
+
+    setTimeout(() => {
+      sperms[player].style.transitionDuration = '0.5s'
+      sperms[player].style.transform = `rotate(90deg) scale(${scale ** -1})`
+
+      setTimeout(() => {
+        totalPosY[player] -= Math.min(housesLeft, 2) * houseHeight
+        sperms[player].style.transitionDuration = `${
+          (500 * Math.min(housesLeft, 2)) / 1000
+        }s`
+        move(player, Math.min(housesLeft, 2) * 500)
+      }, 500)
+    }, (14 - actualHouse) * 500)
+  } else if (players[player].score > 16 && players[player].score <= 20) {
+    var downHouses
+    if (actualHouse < 14) {
+      totalPosX[player] =
+        (sperms[player].width - sperms[player].width / scale) / 2 -
+        minLeftMargin -
+        (randomPosX[player] * scale ** -1) / 0.2
+
+      sperms[player].style.transitionDuration = `0.5s`
+      move(player, 500)
+
+      housesLeft = actualHouse + houses - 14
+
+      downHouses = 2
+    } else {
+      downHouses = Math.max(16 - actualHouse, 0)
+    }
+    setTimeout(() => {
+      if (downHouses) {
+        sperms[player].style.transitionDuration = `0.5s`
+        sperms[player].style.transform = `rotate(90deg) scale(${scale ** -1})`
+        setTimeout(() => {
+          totalPosY[player] -= downHouses * houseHeight
+          sperms[player].style.transitionDuration = `${
+            (downHouses * 500 * Math.min(housesLeft, 2)) / 1000
+          }s`
+          move(player, (downHouses + 1) * 500)
+        }, 500)
+      }
+
+      housesLeft = housesLeft - downHouses
+
+      setTimeout(() => {
+        sperms[player].style.transitionDuration = '0.5s'
+        sperms[player].style.transform = `rotate(0deg) scale(${scale ** -1})`
+
+        setTimeout(() => {
+          totalPosX[player] -= housesLeft * houseWidth
+          sperms[player].style.transitionDuration = `${
+            (500 * housesLeft) / 1000
+          }s`
+          move(player, housesLeft * 500)
+        }, 500)
+      }, (downHouses + 2) * 500)
+    }, 1000)
   } else {
     totalPosX[player] -= housesLeft * houseWidth
-    sperms[player].style.transitionDuration = `${(500 * housesLeft)/1000}s`
+    sperms[player].style.transitionDuration = `${(500 * housesLeft) / 1000}s`
     move(player, housesLeft * 500)
   }
 }
