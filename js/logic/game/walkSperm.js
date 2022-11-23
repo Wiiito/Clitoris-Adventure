@@ -42,12 +42,38 @@ for (let i = 0; i < 4; i++) {
 function movePlayer(player, houses) {
   changePlayer(player)
   startAnimation()
-  totalPosX[player] -= houses * houseWidth
   players[player].score += houses
 
+  if (players[player].score > 6) {
+    totalPosX[player] = ((sperms[player].width - (sperms[player].width / scale)) / 2) - minLeftMargin - ((randomPosX[player] * scale ** -1) / 0.2) - (houseWidth * 6) //No inicio deus e eu sabia o que isso faz, agora só ele sabe
+    sperms[player].style.transitionDuration = `1.25s`
+    move(player, 1250)
+    setTimeout(() => {
+      sperms[player].style.transitionDuration = '0.5s'
+      sperms[player].style.transform = `rotate(90deg) scale(${scale ** -1})`
+      setTimeout(() => {
+        startAnimation()
+        sperms[player].style.transitionDuration = `1.25s`
+        totalPosY[player] += Math.max(6 - players[player].score, -2) * houseHeight
+        move(player, 1250)
+      }, 500)
+    }, 1250)
+    /*timeDiference = players[player].score - 6 * 500
+    sperms[player].style.transitionDuration = `${timeDiference/1000}s`*/
+  } else {
+    totalPosX[player] -= houses * houseWidth
+    sperms[player].style.transitionDuration = `3s`
+    move(player, 3000)
+  }
+
+  
+}
+
+function move(player, time) {
   sperms[player].style.marginLeft = -totalPosX[player] + 'px'
   sperms[player].style.marginTop = -totalPosY[player] + 'px'
+
   setTimeout(() => {
     stopAnimation()
-  }, 3000)
+  }, time)
 }
