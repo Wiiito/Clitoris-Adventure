@@ -41,35 +41,41 @@ for (let i = 0; i < 4; i++) {
 
 function movePlayer(player, houses) {
   changePlayer(player)
-  startAnimation()
-  players[player].score += houses
 
-  if (players[player].score > 6) {
-    totalPosX[player] = ((sperms[player].width - (sperms[player].width / scale)) / 2) - minLeftMargin - ((randomPosX[player] * scale ** -1) / 0.2) - (houseWidth * 6) //No inicio deus e eu sabia o que isso faz, agora só ele sabe
-    sperms[player].style.transitionDuration = `1.25s`
-    move(player, 1250)
+  let housesLeft = houses, actualHouse = players[player].score
+  players[player].score += houses
+  if (players[player].score > 6 && players[player].score <= 8) {
+    totalPosX[player] = ((sperms[player].width - (sperms[player].width / scale)) / 2) - minLeftMargin - ((randomPosX[player] * scale ** -1) / 0.2) - (houseWidth * 6)
+    housesLeft = actualHouse + houses - 6
+    sperms[player].style.transitionDuration = `${(500 * (6 - housesLeft))/1000}s`
+    move(player, (6 - housesLeft) * 500)
     setTimeout(() => {
-      sperms[player].style.transitionDuration = '0.5s'
+      sperms[player].style.transitionDuration = `0.5s`
       sperms[player].style.transform = `rotate(90deg) scale(${scale ** -1})`
       setTimeout(() => {
-        startAnimation()
-        sperms[player].style.transitionDuration = `1.25s`
-        totalPosY[player] += Math.max(6 - players[player].score, -2) * houseHeight
-        move(player, 1250)
+        totalPosY[player] -= Math.min(housesLeft, 2) * houseHeight
+        sperms[player].style.transitionDuration = `${(500 * Math.min(housesLeft, 2))/1000}s`
+        move(player, Math.min(housesLeft, 2) * 500)
       }, 500)
-    }, 1250)
-    /*timeDiference = players[player].score - 6 * 500
-    sperms[player].style.transitionDuration = `${timeDiference/1000}s`*/
+    }, (6 - housesLeft) * 500)
+  } else if(players[player].score > 8 && players[player].score <= 14) {
+    //Saindo da casa 8
+    sperms[player].style.transitionDuration = `0.5s`
+    sperms[player].style.transform = `rotate(180deg) scale(${scale ** -1})`
+    setTimeout(() => {
+      sperms[player].style.transitionDuration = `3s`
+      totalPosX[player] += houses * houseWidth
+      move(player, 3000)
+    }, 500);
   } else {
-    totalPosX[player] -= houses * houseWidth
-    sperms[player].style.transitionDuration = `3s`
-    move(player, 3000)
+    totalPosX[player] -= housesLeft * houseWidth
+    sperms[player].style.transitionDuration = `${(500 * housesLeft)/1000}s`
+    move(player, housesLeft * 500)
   }
-
-  
 }
 
 function move(player, time) {
+  startAnimation()
   sperms[player].style.marginLeft = -totalPosX[player] + 'px'
   sperms[player].style.marginTop = -totalPosY[player] + 'px'
 
