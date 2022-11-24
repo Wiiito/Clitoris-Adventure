@@ -11,7 +11,8 @@ function wrongAnswer() {
 
 function rightAnswer() {
   if (players[turn].score >= 20) {
-    console.log('Player ' + turn + ' won!')
+    callOverlay('win')
+    document.getElementById('wonPlayer').innerText = players[turn].name
     return
   }
   setTimeout(() => {
