@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="./css/question.css" />
     <link rel="stylesheet" href="./css/dado.css" />
     <link rel="stylesheet" href="./css/board.css" />
+    <link rel="stylesheet" href="./css/gameOverlay.css" />
     <title>Clitoris Adventure | Game</title>
   </head>
   <body>
@@ -25,6 +26,18 @@
       src="./audios/audios_dado-rolando.mp3"
       type="audio/mpeg"></audio>
     <audio id="music" src="./audios/audios_lobby-classic-game.mp3" loop></audio>
+
+    <div class="overlay">
+      <div class="close"></div>
+      <div class="right">
+        <h3 class="title">Congrats!</h3>
+        <span>You are near the ovum!</span>
+      </div>
+      <div class="wrong">
+        <h3 class="title">You got lost!</h3>
+        <span>Unfortunately you got lost and walked back!</span>
+      </div>
+    </div>
 
     <div class="dado">
       <img src="imgs/0.png" alt="Dado" id="imgDado" />
@@ -107,6 +120,7 @@
     <script src="./js/dado.js"></script>
     <script src="./js/logic/sperm.js"></script>
     <script src="./js/logic/callQuestion.js"></script>
+    <script src="./js/overlay.js"></script>
     <script src="./js/logic/game/answers.js"></script>
     <script src="./js/logic/game/board.js"></script>
     <script src="./js/logic/game/walkSperm.js"></script>

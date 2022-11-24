@@ -12,6 +12,10 @@ const questionTitle = document.querySelector('.questionsTitle').children[0]
 const ansewrs = document.querySelector('.answers').children
 
 async function callQuestion(house) {
+  //Fazendo com que as ultimas perguntas sejam da vitoria
+  if (house > 19) {
+    house = 19
+  }
   //Passa o número da casa, a função calcula sozinha qual pergunta usar
   questionContainer.style.height = '100vh'
   var usedBoxes = [0, 1, 2, 3] //Usado para randomizar as perguntas

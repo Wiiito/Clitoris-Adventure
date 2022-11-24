@@ -15,7 +15,6 @@ function clearOverlay() {
 }
 
 function callOverlay(element) {
-  updateRanges() //Mudando os valores da settings
   //Pra chamar essa função, basta criar uma div dento do overlay com uma classe
   //e passar o nome da classe como parâmetro
   config.forEach(elem => {
