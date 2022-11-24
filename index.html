@@ -29,7 +29,7 @@
 
       <!-- Configurações de som -->
       <div class="settings">
-        <h3 class="title">Settings</h3>
+        <h3 class="title">Configurações</h3>
         <div class="form">
           <div class="box">
             <div class="info">Volume</div>
@@ -41,7 +41,7 @@
             </div>
           </div>
           <div class="box">
-            <div class="info">Music</div>
+            <div class="info">Musica</div>
             <div class="input">
               <input
                 type="range"
@@ -50,7 +50,7 @@
             </div>
           </div>
           <div class="box">
-            <div class="info">Effects</div>
+            <div class="info">Efeitos</div>
             <div class="input">
               <input
                 type="range"
@@ -62,7 +62,7 @@
       </div>
       <!-- Quantidade de jogadores -->
       <div class="players">
-        <h3 class="title">Players</h3>
+        <h3 class="title">Jogadores</h3>
         <form class="form" method="GET" action="./game.html">
           <div class="box">
             <input type="text" class="info" value="" name="player0" />
@@ -93,7 +93,7 @@
             </div>
           </div>
           <div class="buttonHolder">
-            <button type="submit">Play</button>
+            <button type="submit">Jogar</button>
           </div>
         </form>
       </div>
@@ -116,9 +116,11 @@
           <img src="./imgs/title.png" alt="Clitoris Adventure" class="title" />
         </div>
         <menu class="menu">
-          <div class="buttons" onclick="startGame()">Start</div>
-          <div class="buttons" onclick="callOverlay('settings')">Settings</div>
-          <div class="buttons" onclick="callOverlay('credit')">Credits</div>
+          <div class="buttons" onclick="startGame()">Jogar</div>
+          <div class="buttons" onclick="callOverlay('settings')">
+            Configurações
+          </div>
+          <div class="buttons" onclick="callOverlay('credit')">Creditos</div>
         </menu>
       </div>
       <div class="copyright"></div>
