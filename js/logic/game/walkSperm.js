@@ -39,6 +39,10 @@ for (let i = 0; i < 4; i++) {
   sperms[i].style.marginLeft = -totalPosX[i] + 'px'
 }
 
+/*
+A movimentação do jogador recebe a quantidade de casas e utilizando de diversas condicionais adciona ou remove os valores dos arrays totalPosY e totalPosX
+*/
+
 function movePlayer(player, houses) {
   changePlayer(player)
 
@@ -135,12 +139,15 @@ function movePlayer(player, houses) {
       }, (downHouses + 1) * 500)
     }, 500)
   } else if (players[player].score >= 14 && players[player].score <= 16) {
+
+
     totalPosX[player] =
       (sperms[player].width - sperms[player].width / scale) / 2 -
       minLeftMargin -
       (randomPosX[player] * scale ** -1) / 0.2
 
     housesLeft = actualHouse + houses - 14
+
     sperms[player].style.transitionDuration = `${
       ((14 - actualHouse) * 500) / 1000
     }s`
@@ -151,13 +158,20 @@ function movePlayer(player, houses) {
       sperms[player].style.transform = `rotate(90deg) scale(${scale ** -1})`
 
       setTimeout(() => {
-        totalPosY[player] -= Math.min(housesLeft, 2) * houseHeight
+        if (actualHouse < players[player].score) {
+          totalPosY[player] -= Math.min(housesLeft, 2) * houseHeight
+        } else {
+          totalPosY[player] -= ((actualHouse + houses) - 16) * houseHeight
+        }
+    
         sperms[player].style.transitionDuration = `${
           (500 * Math.min(housesLeft, 2)) / 1000
         }s`
         move(player, Math.min(housesLeft, 2) * 500)
       }, 500)
     }, (14 - actualHouse) * 500)
+
+
   } else if (players[player].score > 16 && players[player].score <= 20) {
     var downHouses
     if (actualHouse < 14) {
