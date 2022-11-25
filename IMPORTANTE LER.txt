@@ -1,0 +1,6 @@
+O nosso site ta usando fetch pra pegar as perguntas do json, por isso ele só funciona hospedado, seja na internet (utilizado na apresentação) ou em liveServer
+
+Utilizamos canvas no timer e nos personagens
+
+Link do site: https://clitoris-adventure.vercel.app/	
+Link do codigo no github: https://github.com/Wiiito/Clitoris-Adventure
