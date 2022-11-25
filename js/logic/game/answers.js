@@ -12,6 +12,8 @@ function wrongAnswer() {
 function rightAnswer() {
   if (players[turn].score >= 20) {
     callOverlay('win')
+    document.getElementById('points').innerText =
+      'Pontuação: ' + Math.ceil(players[turn].points)
     document.getElementById('wonPlayer').innerText = players[turn].name
     return
   }
